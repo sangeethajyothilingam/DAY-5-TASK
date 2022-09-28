@@ -1,0 +1,36 @@
+g.Remove the duplicates in an array
+// anonymous function
+var temp = [];
+var remove = function(arr){
+for (var i =0; i<arr.length; i++){
+var count = 0;
+for (var j=i; j<arr.length;j++){
+if (arr[i] ==arr[j]){
+count++
+}
+}
+if (count<=1){
+temp.push(arr[i]);
+}
+}
+return temp;
+}
+console.log(remove([1,2,3,4,4,2,1]));
+
+//IIFE FUNCTION
+var temp = [];
+function remove(arr){
+for (var i =0; i<arr.length; i++){
+var count = 0;
+for (var j=i; j<arr.length;j++){
+if (arr[i] ==arr[j]){
+count++
+}
+}
+if (count<=1){
+temp.push(arr[i]);
+}
+}
+console.log(temp);
+}
+(remove([1,2,3,4,4,2,1]));

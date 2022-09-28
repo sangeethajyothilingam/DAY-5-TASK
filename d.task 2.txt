@@ -1,0 +1,20 @@
+/ 4.return all prime numbers in an array
+//arrow function
+var a = [2,3,4,5,6]
+var prime = [];
+var isPrime= (arr) => {
+    var identifier = arr / 2;
+      for (var j = 2; j <= identifier; j++) {
+       if ((arr% j) == 0) { 
+        return false;
+       } 
+     }
+     return true;
+}
+for (var index = 0; index < a.length; index++) {
+  if (isPrime(a[index])) {
+      prime.push(a[index])
+  }
+}
+
+console.log(prime);

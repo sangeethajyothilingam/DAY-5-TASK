@@ -1,0 +1,31 @@
+f.return median of two sorted arrays of the same size
+//anonymous function
+
+var median = function (arr1,arr2){
+var arr = [...arr1,...arr2].sort();
+if(arr.length %2 ==0){
+var mid1 =[arr.length/2];
+var mid2 =[arr.length/2 -1];
+return (mid1 +mid2)/2;
+}
+else{
+return arr[Math.Floor(arr.length/2)];
+}
+};
+console.log(median([1,10,5],[2,4,9]));
+
+
+//IIFE FUNCTION
+function median (arr1,arr2){
+var arr = [...arr1,...arr2].sort();
+if(arr.length %2 ==0){
+var mid1 =[arr.length/2];
+var mid2 =[arr.length/2 -1];
+return (mid1 +mid2)/2;
+}
+else{
+console.log(arr[Math.Floor(arr.length/2)]);
+}
+
+};
+(median([1,10,5],[2,4,9]));

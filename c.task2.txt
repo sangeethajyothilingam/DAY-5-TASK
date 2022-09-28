@@ -1,0 +1,11 @@
+//c)sum of all numbers in the array
+   //arrow function
+  
+   var total = 0;
+   var sum =  (arr) => {
+    for (var i=0; i<arr.length; i++) {
+        total = total + arr[i];
+    }
+    return total;
+}
+console.log(sum([10,20,30,40]));

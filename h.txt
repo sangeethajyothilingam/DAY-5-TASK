@@ -1,0 +1,21 @@
+h) rotate an array k times
+//anonymous function
+
+var rotate = function(arr, k) {
+    for (var i=0;i<k;i++){
+   arr.unshift(arr.pop());
+    }
+  return arr;
+}
+console.log(rotate([1,2,3],2));
+});
+
+//IIFE FUNCTION
+function rotate(arr, k) {
+    for (var i=0;i<k;i++){
+   arr.unshift(arr.pop());
+    }
+  console.log(arr);
+}
+(rotate([1,2,3],2));
+
